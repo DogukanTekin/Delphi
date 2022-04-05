@@ -1,0 +1,25 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Form6'
+  ClientHeight = 799
+  ClientWidth = 1427
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ADOConnection1: TADOConnection
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;User ID=g2;Initial Catalog=ogrenci;Data Source=DOGUKANM' +
+      'ONSTER'
+    Provider = 'SQLOLEDB.1'
+    Left = 24
+    Top = 16
+  end
+end

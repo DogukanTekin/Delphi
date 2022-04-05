@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{87C30CC9-0882-4BA9-8BC5-6F553226942A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project5.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\..\Videolar\Hafta 5 02.11\Görsel 2 Proje Örgün çift\IMYO.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project5">
+        <MSBuild Projects="Project5.dproj"/>
+    </Target>
+    <Target Name="Project5:Clean">
+        <MSBuild Projects="Project5.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project5:Make">
+        <MSBuild Projects="Project5.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IMYO">
+        <MSBuild Projects="..\..\Videolar\Hafta 5 02.11\Görsel 2 Proje Örgün çift\IMYO.dproj"/>
+    </Target>
+    <Target Name="IMYO:Clean">
+        <MSBuild Projects="..\..\Videolar\Hafta 5 02.11\Görsel 2 Proje Örgün çift\IMYO.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IMYO:Make">
+        <MSBuild Projects="..\..\Videolar\Hafta 5 02.11\Görsel 2 Proje Örgün çift\IMYO.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project5;IMYO"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project5:Clean;IMYO:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project5:Make;IMYO:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
